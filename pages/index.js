@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
 
+
 export default function Home() {
   const[csvConverted, setCsvConverted] = React.useState("");
   const handleChange2 = (e) => {
@@ -20,48 +21,74 @@ export default function Home() {
   return (
    <div className={styles.container}>
      
-      <Head>
         <title>BeeSV</title>
+        <meta name="description" content="Jazz up boring old CSV files by replacing the commas with the entire Bee Movie script" />
+      <Head>
+       
+
       </Head>
 
       <main className={styles.main}>
      
      <div className={styles.main}>
-     <Image className={styles.main} src="/bee.png"  width={272} height={216} align />
+     <Image className={styles.bee} src="/bee.png"  width={272} height={216} />
      <h1 className={styles.title}>
-     
           Welcome to <a style={{color:'#E3B630'}}>BeeSV</a>
         </h1>
+        
+        <h2 className={styles.description}>Jazz up boring old CSV files by replacing the commas with the entire Bee Movie script</h2>
+         
      
+<div className={styles.grid}>
 
+<div className={styles.card}>
       <p>Paste CSV</p>
-       <input  style={{maxHeight:200, overflowY:'scroll', width:'80vw',}} onChange={handleChange} />
+       <input  style={{maxHeight:400, minWidth:'70vw', maxWidth:'70vw',overflowY:'scroll'}} onChange={handleChange} />
        <br></br>
-       <p>Converted BeeSV</p>
-       <p style={{maxHeight:800, overflowY:'scroll', width:'80vw' }} >{csv}</p>
        
-
-       <p>Paste BeeSV</p>
-       <input  style={{maxHeight:200, overflowY:'scroll', width:'80vw',}} onChange={handleChange2} />
-       <br></br>
-       <p>Converted CSV</p>
-       <p style={{maxHeight:800, overflowY:'scroll', width:'80vw' }} >{csvConverted}</p>
+       <p>Converted BeeSV</p>
+       <div className={styles.innercard}>
+       <p style={{maxHeight:400, minWidth:'65vw', maxWidth:'65vw',overflowY:'scroll'}} >{csv}</p>
        </div>
+  </div>
 
- 
+  <div className={styles.card}>
+       <p>Paste BeeSV</p>
+       <input  style={{maxHeight:400, minWidth:'70vw', maxWidth:'70vw',overflowY:'scroll'}} onChange={handleChange2} />
+       <br></br>
+
+       <p>Converted CSV</p>
+       <div className={styles.innercard}>
+       <p style={{maxHeight:400, minWidth:'65vw', maxWidth:'65vw',overflowY:'scroll'}} >{csvConverted}</p>
+       </div>
+       </div>
+</div>
+
+       </div>
+       
       </main>
 
       <footer className={styles.footer}>
       <a 
           href="https://buymeacoffee.com/AdamL"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span style={{paddingBottom:70 }}className={styles.logo}>
-            <Image src="/bmc-button.png"  width={200} height={56}   />
-            <br></br>
+          rel="noopener noreferrer">
+
+          <span align="center" style={{paddingBottom:50, marginBottom:10 }}className={styles.logo}>
+            <Image src="/bmc-button.png"  width={200} height={56}/><br></br>
           </span>
         </a>
+        <a 
+          href="https://github.com/Alloyd21/BeeSV"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <span align="center" style={{paddingBottom:0 }}className={styles.logo}>
+            
+            <Image src="/githubbutton.png"  width={168} height={30}   /><br></br>
+          </span>
+        </a>
+       
       </footer>
     </div>
   )
