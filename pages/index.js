@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
 
@@ -28,10 +27,10 @@ export default function Home() {
 
       </Head>
 
-      <main className={styles.main}>
+    
      
      <div className={styles.main}>
-     <Image className={styles.bee} src="/bee.png"  width={272} height={216} />
+     <img className={styles.bee} src="/bee.png"  width={272} height={216} />
      <h1 className={styles.title}>
           Welcome to <a style={{color:'#E3B630'}}>BeeSV</a>
         </h1>
@@ -41,10 +40,10 @@ export default function Home() {
      
 <div className={styles.grid}>
 
-<div className={styles.card}>
+<div className={styles.card} >
       <p>Paste CSV</p>
        <input  style={{maxHeight:400, minWidth:'70vw', maxWidth:'70vw',overflowY:'scroll'}} onChange={handleChange} />
-       <br></br>
+      
        
        <p>Converted BeeSV</p>
        <div className={styles.innercard}>
@@ -55,7 +54,7 @@ export default function Home() {
   <div className={styles.card}>
        <p>Paste BeeSV</p>
        <input  style={{maxHeight:400, minWidth:'70vw', maxWidth:'70vw',overflowY:'scroll'}} onChange={handleChange2} />
-       <br></br>
+
 
        <p>Converted CSV</p>
        <div className={styles.innercard}>
@@ -66,16 +65,18 @@ export default function Home() {
 
        </div>
        
-      </main>
+      
 
       <footer className={styles.footer}>
+     <pre>Built for fun and published under the<a style={{color:'#E3B630'}} href="https://raw.githubusercontent.com/Alloyd21/BeeSV/main/LICENSE" >MIT Licence</a></pre>
+   
       <a 
           href="https://buymeacoffee.com/AdamL"
           target="_blank"
           rel="noopener noreferrer">
 
           <span align="center" style={{paddingBottom:50, marginBottom:10 }}className={styles.logo}>
-            <Image src="/bmc-button.png"  width={200} height={56}/><br></br>
+            <img src="/bmc-button.png"  width={200} height={56}/><br></br>
           </span>
         </a>
         <a 
@@ -85,7 +86,7 @@ export default function Home() {
 
           <span align="center" style={{paddingBottom:0 }}className={styles.logo}>
             
-            <Image src="/githubbutton.png"  width={168} height={30}   /><br></br>
+            <img src="/githubbutton.png"  width={168} height={30}   /><br></br>
           </span>
         </a>
        
