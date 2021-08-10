@@ -112,7 +112,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 70vw;
-  max-height: 150px;
+  max-height: 1500px;
 }
 .card:hover,
 .card:focus,

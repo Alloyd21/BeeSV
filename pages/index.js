@@ -17,22 +17,35 @@ export default function Home() {
     setCsv(newValue);
   }
 
+
+  
+
   return (
    <div className={styles.container}>
      
         <title>BeeSV</title>
         <meta name="description" content="Jazz up boring old CSV files by replacing the commas with the entire Bee Movie script" />
       <Head>
-       
+       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69814201-6"/>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-69814201-6', { page_path: window.location.pathname });`,
+             }}
+        />
+  
 
       </Head>
 
     
      
      <div className={styles.main}>
-     <img className={styles.bee} src="/bee.png"  width={272} height={216} />
+     <img className={styles.bee} src="/bee.png" alt="BeeLogo" width={272} height={216} />
      <h1 className={styles.title}>
-          Welcome to <a style={{color:'#E3B630'}}>BeeSV</a>
+          Welcome to <a style={{color:'#E3B630'}}>BeeSV</a>.com
         </h1>
         
         <h2 className={styles.description}>Jazz up boring old CSV files by replacing the commas with the entire Bee Movie script</h2>
@@ -76,7 +89,7 @@ export default function Home() {
           rel="noopener noreferrer">
 
           <span align="center" style={{paddingBottom:50, marginBottom:10 }}className={styles.logo}>
-            <img src="/bmc-button.png"  width={200} height={56}/><br></br>
+            <img alt="buycoffee"src="/bmc-button.png"  width={200} height={56}/><br></br>
           </span>
         </a>
         <a 
@@ -86,10 +99,10 @@ export default function Home() {
 
           <span align="center" style={{paddingBottom:0 }}className={styles.logo}>
             
-            <img src="/githubbutton.png"  width={168} height={30}   /><br></br>
+            <img alt="github" src="/githubbutton.png"  width={168} height={30}   /><br></br>
           </span>
         </a>
-       
+      
       </footer>
     </div>
   )
