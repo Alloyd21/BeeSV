@@ -58,7 +58,7 @@ export default function Home() {
        
        <p>Converted BeeSV</p>
        <div className={styles.innercard}>
-       <p style={{maxHeight:400, minWidth:'65vw', maxWidth:'65vw',overflowY:'scroll'}} >{csv}</p>
+       <p style={{ whitespace:'pre-wrap', maxHeight:400, minWidth:'65vw', maxWidth:'65vw',overflowY:'scroll'}} >{csv}</p>
        </div>
   </div>
 
